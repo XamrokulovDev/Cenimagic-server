@@ -1,6 +1,6 @@
 const Movies = require("../models/movie.model");
 const asyncHandle = require("../middlewares/async");
-const ErrorResponse = require("../utils/errorResponse");
+const ErrorResponse = require("../utils/ErrorResponse");
 
 exports.getMovies = asyncHandle(async (req, res, next) => {
     const movies = await Movies.find();
