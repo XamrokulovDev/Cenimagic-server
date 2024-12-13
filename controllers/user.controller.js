@@ -1,6 +1,6 @@
 const User = require("../models/user.model");
 const asyncHandle = require("../middlewares/async");
-const ErrorResponse = require("../middlewares/error");
+const ErrorResponse = require("../utils/ErrorResponse");
 const uuid = require("uuid");
 require("dotenv").config(); // .env faylidan o'qish uchun
 
