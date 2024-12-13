@@ -2,7 +2,7 @@ const User = require("../models/user.model");
 const asyncHandle = require("./async");
 const RateLimit = require("express-rate-limit");
 const jwt = require("jsonwebtoken");
-const ErrorResponse = require("../utils/errorResponse");
+const ErrorResponse = require("../utils/ErrorResponse");
 
 exports.protected = asyncHandle(async (req, res, next) => {
     let token;
