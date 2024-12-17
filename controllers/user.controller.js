@@ -2,7 +2,6 @@ const User = require("../models/user.model");
 const asyncHandle = require("../middlewares/async");
 const ErrorResponse = require("../utils/ErrorResponse");
 const uuid = require("uuid");
-require("dotenv").config(); // .env faylidan o'qish uchun
 
 // @desc Post register
 // @route POST /api/v1/auth/register
@@ -13,7 +12,6 @@ exports.Register = asyncHandle(async (req, res, next) => {
         return next(new ErrorResponse('Invalid credentials', 400));
     }
 
-    // Admin tekshiruvi
     let isAdmin = false;
     if (email === process.env.ADMIN_EMAIL && password === process.env.ADMIN_PASSWORD) {
         isAdmin = true;
